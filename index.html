@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Site usando Parallax</title>
+</head>
+
+<body>
+    <header>
+        <img src="img/LOGO.png" width="200px">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="https://twitter.com/byinspiration_">Twitter</a></li>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="img/stars.png" id="stars" alt="">
+        <img src="img/moon.png" id="moon" alt="">
+        <h2 id="text">Genesis</h2>
+        <a href="#sec" id="btn"></a>
+        <img src="img/mountains_behind.png" id="mountains_behind" alt="">
+        <img src="img/mountains_front.png" id="mountains_front" alt="">
+
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Genesis by inspiration</h2>
+        <p>The Genesis By Inspiration is our first drop on web3, the minted pass grants lifetime access for as long as
+            you are a holder.
+
+            <br> The art of the Genesis collection is a mix of inspirations from great painters of humanity, we want to
+            tell
+            stories through art, and art through
+            </br>
+
+            <br> Our first inspiration comes from the colorful traces of Romero Brito, the shapes and geometries of
+            Kandinsky
+            and the simplicity of Joan Miró.
+        </p>
+
+        <p> If you hold any collection for more than 2 months at staking, you can order a painting of dimensions not yet
+            previously defined and pay only the shipping <br> the physical art to arrive at your home.
+            The Genesis By Inspiration collection is our first drop on web3, the minted pass grants lifetime access to
+            the next drops as long as you are a folder.</p><br>
+
+        <p>The art of the Genesis collection is a mix of inspirations from great painters of humanity, we want to tell
+            stories through art, and art through stories.</p>
+
+        <p>Our first inspiration comes from the colorful traces of Romero Brito, the shapes and geometries of Kandinsky
+            and the simplicity of Joan Miró.</p>
+
+        <p>If you hold any collection for more than 2 months at staking, you can order a painting of dimensions not yet
+            previously defined and pay only the shipping for the physical art to arrive at your home.
+            A collaborative collection between independent artists with a gigantic private portfolio created over
+            several months. Featuring samurai of the Japanese dynasty as well as their roots. Our mission is to provide
+            NFT holders with a universe of art and technology. Samurai Genesis grants access to the next mint as well as
+            the first Key AirDrop. This is the easiest opportunity to enter our universe.
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 3 + 'px';
+            text.style.marginTop = value * 0 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.marginTop = value * 0.5 + 'px';
+        })
+    </script>
+
+</body>
+
+</html>
